@@ -6,7 +6,12 @@ I wrote this ChicagoCrimeTracker to show my skills with ArcGIS API for JavaScrip
 
 [GitHub - cconover2b/ChicagoCrimeTracker](https://github.com/cconover2b/ChicagoCrimeTracker)
 
-[Software Demo Video](http://youtube.link.goes.here/)
+Interactive Website
+
+[Chicago Crime Tracker - Demo by Craig Conover (cconover2b.repl.co)](https://chicagocrimetracker.cconover2b.repl.co/)
+
+
+[Software Demo - Video on YouTube](http://youtube.link.goes.here/)
 
 ## **Development Environment**
 
