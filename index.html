@@ -27,11 +27,13 @@
     </style>
 
     <script>
-      require(["esri/Map", "esri/layers/FeatureLayer", "esri/views/MapView", "esri/PopupTemplate"], (
+      require(["esri/Map", "esri/layers/FeatureLayer", "esri/views/MapView", "esri/PopupTemplate", "esri/widgets/Locate", "esri/widgets/Search",], (
         Map,
         FeatureLayer,
         MapView,
-        PopupTemplate
+        PopupTemplate,
+        Locate, 
+        Search
       ) => {
         // layer renderer
         // set the visuals
@@ -174,6 +176,22 @@
           // add layer
           map.add(chicagoCrime);
         });
+
+        // Create a locate me button
+        var locate = new Locate({
+            view: view,
+            useHeadingEnabled: false,
+            goToOverride: function(view, options) {
+                options.target.scale = 1000000;  // 1/1000000 scale
+                return view.goTo(options.target);
+              }
+        });
+        view.ui.add(locate, "top-left");
+
+        var search = new Search({
+            view: view
+        });
+        view.ui.add(search, "top-right"); 
       
       });
     </script>
